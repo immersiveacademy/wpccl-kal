@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>'Immersion: Homebush Bay Patch' by Artist Kalanjay Dhi</title>
+    <meta name="description" content="3D Application" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script src="js/aframe-master.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+  </head>
+  <body onload="init();">
+    <a-scene shadow="type: basic; autoUpdate: false;">
+      
+      <a-assets>
+        <a-asset-item id="Floor" src="https://raw.githubusercontent.com/immersiveacademy/wpcclkal/main/assets/Floor.gltf"></a-asset-item>
+      </a-assets>
+      
+      <a-entity id="#Floor" light-map-geometry="path:lightmaps/Floor_baked.png; intensity: 1.0" gltf-model="#Floor" scale="1 1 1" position="3.814697265625e-06 -0.09810912609100342 -0.0" visible="true" shadow="cast: false" ></a-entity>
+      
+    </a-scene>
+  </body>
+</html>
