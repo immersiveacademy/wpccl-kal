@@ -8,19 +8,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <script src="js/aframe-master.min.js"></script>
+<!--    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
     <script type="text/javascript" src="js/webxr.js"></script>
     <script src="js/particle-system-instanced.js"></script>
+    <script type="text/javascript" src="/aframe-vimeo-component.min.js"></script>
   </head>
   <body>
     <a-scene shadow="type: basic; autoUpdate: false;">
       
       <a-assets>
         <a-asset-item id="Floor" src="/models/Floor.gltf"></a-asset-item>
+        <a-asset-item id="Wall" src="/models/Wall.gltf"></a-asset-item>
+          
+          <img id="skybox" src="images/clear-sunny-sky.jpg">
+          <img id="footsteps" src="images/footsteps.png">
       </a-assets>
       
+        <!-- Sky -->
+        <a-sky src="#skybox"></a-sky>
+        
+<!--      floor and wall-->
       <a-entity id="#Floor" light-map-geometry="path:/lightmaps/Floor_baked.png; intensity: 1.0" gltf-model="#Floor" scale="1 1 1" position="3.814697265625e-06 -0.09810912609100342 -0.0" visible="true" shadow="cast: false" ></a-entity>
+      <a-entity id="#Wall" light-map-geometry="path: lightmaps/Wall_baked.png; intensity: 1.0" gltf-model="#Wall" scale="1 1 1" position="2.006608009338379 1.0926811695098877 0.171954944729805" visible="true" shadow="cast: false" ></a-entity>
       
+<!--        Video panel -->
+<!--
+        <a-video id="video01" vimeo="id: 549115867" width="1.33" height="1" position="-1.6 1.442 3.48" rotation="0 180 0">
+            
+        </a-video>    
+-->
+        
+        
+        <a-entity vimeo="id: 549115867" position="-1.6 1.442 3.4" rotation="0 180 0">
+            <a-plane color="#000000" scale="3.2 1.8" position="0.0 0 0"></a-plane>
+        </a-entity>
+        
+        <!-- Checkpoint -->
+        <a-image src="#footsteps" 
+             position="-1.54 0.1 1.0"
+             rotation="90 0 0"
+             scale="0.8 0.8 0.8"
+             checkpoint></a-image>
+
+        <a-image src="#footsteps" 
+             position="3.246 0.1 0.2"
+             rotation="90 60 0"
+             scale="0.8 0.8 0.8"
+             checkpoint></a-image>
+
+        <!-- Near the Door -->
+        <a-image src="#footsteps" 
+             position="-3.5 0.1 -3"
+             rotation="90 40 0"
+             scale="0.8 0.8 0.8"
+             checkpoint></a-image>
+        
+<!--
+      <a-entity id="player" position="-3.5 -.2 -3" rotation="0 -140 0"
+                      movement-controls
+                      checkpoint-controls="mode:animate">
+          <a-entity id="camera" 
+                camera="near: 0.001" 
+                position="0 1.7 0" 
+                look-controls="pointerLockEnabled: true">
+            <a-entity 
+                      cursor
+                      geometry="primitive: ring; radiusOuter: 0.015;
+                                radiusInner: 0.01; segmentsTheta: 32"
+                      material="color: #283644; shader: flat"
+                      position="0 0 -0.75"></a-entity>
+          </a-entity>
+      </a-entity>
+-->
+        
+<!--
+        <a-entity id="rig"
+                  movement-controls
+                  position="-3.5 -0.2 -3">
+          <a-entity camera
+                    position="0 1.7 0"
+                    look-controls="pointerLockEnabled: true"></a-entity>
+        </a-entity>
+-->
+      
+        <a-entity camera look-controls wasd-controls="acceleration:100" 
+                  position="-3.5 1.6 -3" rotation="0 180 0">
+            <a-entity cursor geometry="primitive: ring; radiusOuter: 0.015;
+                                radiusInner: 0.01; segmentsTheta: 32"
+                      material="color: #283644; shader: flat"
+                      position="0 0 -0.75">
+            </a-entity>
+        </a-entity>
+
+        
+      <!-- Lights -->
+      <a-entity light="intensity: 0.2; castShadow: false; shadowBias: -0.001; shadowCameraFar: 501.02; 
+                       shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2" position="1.36586 7.17965 1"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.1"></a-entity>
+        
     </a-scene>
   </body>
 </html>
