@@ -45,7 +45,7 @@ app.use(hostValidation({ hosts: [`127.0.0.1:${process.env.PORT}`,
 
 
 app.get('/', (request, response) => {
-  response.render('basic.html');
+  response.render('exhibition.html');
 });
 
 app.get('/basic', (request, response) => {

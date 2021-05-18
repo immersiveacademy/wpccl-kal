@@ -9,15 +9,17 @@
     
     <script src="js/aframe-master.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script type="text/javascript" src="js/webxr.js"></script>
+    <script src="js/particle-system-instanced.js"></script>
   </head>
-  <body onload="init();">
+  <body>
     <a-scene shadow="type: basic; autoUpdate: false;">
       
       <a-assets>
-        <a-asset-item id="Floor" src="https://raw.githubusercontent.com/immersiveacademy/wpcclkal/main/assets/Floor.gltf"></a-asset-item>
+        <a-asset-item id="Floor" src="/models/Floor.gltf"></a-asset-item>
       </a-assets>
       
-      <a-entity id="#Floor" light-map-geometry="path:lightmaps/Floor_baked.png; intensity: 1.0" gltf-model="#Floor" scale="1 1 1" position="3.814697265625e-06 -0.09810912609100342 -0.0" visible="true" shadow="cast: false" ></a-entity>
+      <a-entity id="#Floor" light-map-geometry="path:/lightmaps/Floor_baked.png; intensity: 1.0" gltf-model="#Floor" scale="1 1 1" position="3.814697265625e-06 -0.09810912609100342 -0.0" visible="true" shadow="cast: false" ></a-entity>
       
     </a-scene>
   </body>
