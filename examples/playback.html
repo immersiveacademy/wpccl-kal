@@ -23,11 +23,12 @@
 
   //Wait until the A-Scene component was loaded before doing anything
   document.querySelector('#vimeo-player').addEventListener('loaded', function () {
+    console.log('vimeo-player loaded');  
     var box = document.getElementById('box');
     var vimeoPlayer = document.querySelector('#vimeo-player').components.vimeo;
 
     //Register on box click event that triggers the player
-    box.addEventListener('click', function () {
+    box.addEventListener('mouseenter', function () {
       if (vimeoPlayer.player.isPlaying()) {
         vimeoPlayer.pause();
       } else {
