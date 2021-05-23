@@ -1,0 +1,191 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Frame.entrance.door.001"
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 0,
+                        "path" : "translation"
+                    }
+                }
+            ],
+            "name" : "Frame.entrance.door.001Action",
+            "samplers" : [
+                {
+                    "input" : 6,
+                    "interpolation" : "STEP",
+                    "output" : 7
+                }
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Panel.Creative.Space.002",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.8000000715255737,
+                    0.2785854935646057,
+                    0.03304584324359894,
+                    1
+                ],
+                "metallicFactor" : 0.5153374075889587,
+                "roughnessFactor" : 0.7331288456916809
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.044",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "TEXCOORD_1" : 3,
+                        "COLOR_0" : 4
+                    },
+                    "indices" : 5,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 12,
+            "max" : [
+                0.22703002393245697,
+                1.236718773841858,
+                0.002459100913256407
+            ],
+            "min" : [
+                -0.22703002393245697,
+                -1.236718773841858,
+                -0.002459100913256407
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 12,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5123,
+            "count" : 18,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 1,
+            "max" : [
+                0
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 1,
+            "type" : "VEC3"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 144
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96,
+            "byteOffset" : 288
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96,
+            "byteOffset" : 384
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96,
+            "byteOffset" : 480
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 36,
+            "byteOffset" : 576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4,
+            "byteOffset" : 612
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 616
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 628,
+            "uri" : "data:application/octet-stream;base64,j3povs1Mnr/eKCG7j3povs1Mnr/eKCE7j3poPs1Mnr/eKCG7j3poPs1Mnr/eKCE7j3povs1Mnj/eKCG7j3povs1Mnj/eKCG7j3povs1Mnj/eKCE7j3povs1Mnj/eKCE7j3poPs1Mnj/eKCG7j3poPs1Mnj/eKCG7j3poPs1Mnj/eKCE7j3poPs1Mnj/eKCE7AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACAAAAAAAAAAAAAAIC/AAAAAAAAgD8AAACAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAACALRMeP8LRaz8sEx4/FmRgPyuKAT/C0Ws/KooBPxZkYD8tEx4/wtFrPy0THj/C0Ws/LBMePxZkYD8sEx4/FmRgPyuKAT/C0Ws/K4oBP8LRaz8qigE/FmRgPyqKAT8WZGA/OplvP6KgfD+g11c8o6B8P1W3+T6joHw/3TnsPqKgfD86mW8/NM4qPqOgfD8S4wk/YNdXPDjOKj71V3Y/EuMJP1O3+T44zio+o6B8P6KgfD/bOew+NM4qPvVXdj+ioHw/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////CwAJAAUACwAFAAcAAQADAAoAAQAKAAYAAgAAAAQAAgAEAAgAAAAAAAAAAAAAAAAAAAAAgA=="
+        }
+    ]
+}

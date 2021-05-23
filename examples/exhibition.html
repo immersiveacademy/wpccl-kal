@@ -11,8 +11,8 @@
 <!--    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
     <script type="text/javascript" src="js/webxr.js"></script>
-    <script src="js/particle-system-instanced.js"></script>
     <script type="text/javascript" src="/aframe-vimeo-component.min.js"></script>
+    <script type="text/javascript" src="js/particle-system-instanced.js"></script>
     <script>
       //Adjust the camera rig height
       AFRAME.registerComponent("enter-vr-mode-llh", {
@@ -96,31 +96,122 @@
       <a-assets>
         <a-asset-item id="Floor" src="/models/Floor.gltf"></a-asset-item>
         <a-asset-item id="Wall" src="/models/Wall.gltf"></a-asset-item>
+        <a-asset-item id="rock.001" src="/models/rock.001.gltf"></a-asset-item>
+        <a-asset-item id="Bottle" src="/models/Bottle.gltf"></a-asset-item>
+        <a-asset-item id="Bottle.001" src="/models/Bottle.001.gltf"></a-asset-item>
+        <a-asset-item id="Bottle.002" src="/models/Bottle.002.gltf"></a-asset-item>
+        <a-asset-item id="Bottle.003" src="/models/Bottle.003.gltf"></a-asset-item>
+        <a-asset-item id="fan.001" src="./models/fan.001.gltf"></a-asset-item>
+
+        <a-asset-item id="Ceiling.high" src="/models/Ceiling.high.gltf"></a-asset-item>
+        <a-asset-item id="Ceiling.high.vents" src="/models/Ceiling.high.vents.gltf"></a-asset-item>
+        <a-asset-item id="Ceiling.low" src="/models/Ceiling.low.gltf"></a-asset-item>
+        <a-asset-item id="Ceiling.low.vents" src="/models/Ceiling.low.vents.gltf"></a-asset-item>
+        <a-asset-item id="Door.Back.left" src="/models/Door.Back.left.gltf"></a-asset-item>
+        <a-asset-item id="Door.back.left.frame" src="/models/Door.back.left.frame.gltf"></a-asset-item>
+        <a-asset-item id="Door.back.right" src="/models/Door.back.right.gltf"></a-asset-item>
+        <a-asset-item id="Door.Main" src="/models/Door.Main.gltf"></a-asset-item>
+        <a-asset-item id="Door.Main.handle" src="/models/Door.Main.handle.gltf"></a-asset-item>
+        <a-asset-item id="Door.Wall.Cylinder" src="/models/Door.Wall.Cylinder.gltf"></a-asset-item>
+        <a-asset-item id="Droplet.Circle" src="/models/Droplet.Circle.001.gltf"></a-asset-item>  
+        <a-asset-item id="Frame.big" src="/models/Frame.big.gltf"></a-asset-item>
+        <a-asset-item id="Frame.entrance.door" src="/models/Frame.entrance.door.gltf"></a-asset-item>
+        <a-asset-item id="Frame.entrance.door.001" src="/models/Frame.entrance.door.001.gltf"></a-asset-item>
+        <a-asset-item id="Frame.Text" src="/models/Frame.Text.gltf"></a-asset-item>
+        <a-asset-item id="Light.Bulbs" src="/models/Light.Bulbs.gltf"></a-asset-item>
+        <a-asset-item id="Light.Rail.Left" src="/models/Light.Rail.Left.gltf"></a-asset-item>
+        <a-asset-item id="Light.Rail.Right" src="/models/Light.Rail.Right.gltf"></a-asset-item>
+        <a-asset-item id="Screens" src="/models/Screens.gltf"></a-asset-item>
+        <a-asset-item id="Text.Creative.Space" src="/models/Text.Creative.Space.gltf"></a-asset-item>
+          
           
           <img id="skybox" src="images/clear-sunny-sky.jpg">
           <img id="footsteps" src="images/footsteps.png">
+          <img id="particleSmoke" src="images/smokeparticle.png">
       </a-assets>
       
         <!-- Sky -->
         <a-sky src="#skybox"></a-sky>
         
+        <!-- Particle system -->
+        <!--     near door       -->
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.07; particleLifeTime: 4000" 
+                  position="-1 1.442 -1.89" rotation="0 0 180" ></a-entity>
+
+        <!--     near 1st posotion       -->
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.07; particleLifeTime: 2000" 
+                  position="0.4 1.442 -0.1" rotation="0 -60 180" ></a-entity>
+
+        <!--     near 1st posotion       -->
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.04; particleLifeTime: 2000" 
+                  position="0.4 1.442 -0.1" rotation="0 120 180" ></a-entity>
+
+        <!--     near 2nd posotion       -->
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.07; particleLifeTime: 2000" 
+                  position="1.663 1.442 -0.934" rotation="0 120 180" ></a-entity>
+
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.06; particleLifeTime: 2000" 
+                  position="0.511 1.442 1.342" rotation="0 90 180" ></a-entity>
+        <a-entity particle-system-instanced="particleSize: 0.06; 
+                                             src: #particleSmoke; particleSpeed: 0.06; particleLifeTime: 2000" 
+                  position="0.511 1.442 1.342" rotation="0 270 180" ></a-entity>     
+        
 <!--      floor and wall-->
       <a-entity id="#Floor" light-map-geometry="path:/lightmaps/Floor_baked.png; intensity: 1.0" gltf-model="#Floor" scale="1 1 1" position="3.814697265625e-06 -0.09810912609100342 -0.0" visible="true" shadow="cast: false" ></a-entity>
       <a-entity id="#Wall" light-map-geometry="path: lightmaps/Wall_baked.png; intensity: 1.0" gltf-model="#Wall" scale="1 1 1" position="2.006608009338379 1.0926811695098877 0.171954944729805" visible="true" shadow="cast: false" ></a-entity>
+        
+        <!-- Rotation animation -->
+        <a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 10000; easing: linear;"></a-mixin>
+        
       
+        <a-entity id="#rock.001" light-map-geometry="path: lightmaps/rock.001_baked.png; intensity: 1.0" gltf-model="#rock.001" scale="1 1 1" position="0.5576205849647522 0.1659548133611679 -0.3062370717525482" visible="true" shadow="cast: false" ></a-entity>
+        
+        <a-entity id="#Bottle" light-map-geometry="path: lightmaps/Bottle_baked.png; intensity: 1.0" gltf-model="#Bottle" scale="1 1 1" position="0.6073029041290283 0.38931703567504883 -0.14550039172172546" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Bottle.001" light-map-geometry="path: lightmaps/Bottle.001_baked.png; intensity: 1.0" gltf-model="#Bottle.001" scale="1 1 1" position="1.90276300907135 0.3727130591869354 -0.7093632221221924" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Bottle.002" light-map-geometry="path: lightmaps/Bottle.002_baked.png; intensity: 1.0" gltf-model="#Bottle.002" scale="1 1 1" position="0.6107575297355652 0.40374302864074707 1.5652021169662476" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Bottle.003" light-map-geometry="path: lightmaps/Bottle.003_baked.png; intensity: 1.0" gltf-model="#Bottle.003" scale="1 1 1" position="-1.0549373626708984 0.39113956689834595 -1.8921153545379639" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#fan.001" light-map-geometry="path: lightmaps/fan.001_baked.png; intensity: 1.0" gltf-model="#fan.001" scale="1 1 1" position="0.6344772577285767 0.3879011571407318 -0.30648207664489746" visible="true" shadow="cast: false" ></a-entity>
+        
+        <a-entity id="#Ceiling.high" light-map-geometry="path: lightmaps/Ceiling.high_baked.png; intensity: 1.0" gltf-model="#Ceiling.high" scale="1 1 1" position="1.761401891708374 3.0550897121429443 -0.7112571001052856" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Ceiling.high.vents" light-map-geometry="path: lightmaps/Ceiling.high.vents_baked.png; intensity: 1.0" gltf-model="#Ceiling.high.vents" scale="1 1 1" position="1.4336230754852295 3.004230260848999 -0.06863861531019211" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Ceiling.low" light-map-geometry="path: lightmaps/Ceiling.low_baked.png; intensity: 1.0" gltf-model="#Ceiling.low" scale="1 1 1" position="-2.142481803894043 2.746185302734375 0.01341773010790348" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Ceiling.low.vents" light-map-geometry="path: lightmaps/Ceiling.low.vents_baked.png; intensity: 1.0" gltf-model="#Ceiling.low.vents" scale="1 1 1" position="-2.7023487091064453 2.6782422065734863 -0.014820864424109459" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.Back.left" light-map-geometry="path: lightmaps/Door.Back.left_baked.png; intensity: 1.0" gltf-model="#Door.Back.left" scale="1 1 1" position="4.90213680267334 1.2478591203689575 -3.34354829788208" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.back.left.frame" light-map-geometry="path: lightmaps/Door.back.left.frame_baked.png; intensity: 1.0" gltf-model="#Door.back.left.frame" scale="1 1 1" position="4.948210716247559 1.3476346731185913 0.6058731079101562" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.back.right" light-map-geometry="path: lightmaps/Door.back.right_baked.png; intensity: 1.0" gltf-model="#Door.back.right" scale="1 1 1" position="4.945596694946289 1.3225871324539185 2.9863414764404297" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.Main" light-map-geometry="path: lightmaps/Door.Main_baked.png; intensity: 1.0" gltf-model="#Door.Main" scale="1 1 1" position="-3.543789863586426 1.3181190490722656 -3.607468605041504" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.Main.handle" light-map-geometry="path: lightmaps/Door.Main.handle_baked.png; intensity: 1.0" gltf-model="#Door.Main.handle" scale="1 1 1" position="-3.1591334342956543 1.0999934673309326 -3.606506109237671" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Door.Wall.Cylinder" light-map-geometry="path: lightmaps/Door.Wall.Cylinder_baked.png; intensity: 1.0" gltf-model="#Door.Wall.Cylinder" scale="1 1 1" position="-2.2285103797912598 0.5225914120674133 -3.3686394691467285" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Droplet.Circle" light-map-geometry="path: lightmaps/Droplet.Circle.001_baked.png; intensity: 1.0" gltf-model="#Droplet.Circle" scale="1 1 1" position="2.9770584106445312 1.412319540977478 2.087176561355591" mixin="rotation" visible="true" shadow="cast: false" ></a-entity>
+
+        <a-entity id="#Frame.big" light-map-geometry="path: lightmaps/Frame.big_baked.png; intensity: 1.0" gltf-model="#Frame.big" scale="1 1 1" position="1.1757797002792358 1.6822965145111084 -3.6150171756744385" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Frame.entrance.door" light-map-geometry="path: lightmaps/Frame.entrance.door_baked.png; intensity: 1.0" gltf-model="#Frame.entrance.door" scale="1 1 1" position="-3.1628646850585938 1.327684760093689 -3.6123147010803223" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Frame.entrance.door.001" light-map-geometry="path: lightmaps/Frame.entrance.door.001_baked.png; intensity: 1.0" gltf-model="#Frame.entrance.door.001" scale="1 1 1" position="-2.758812665939331 1.3547298908233643 -3.615243434906006" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Frame.Text" light-map-geometry="path: lightmaps/Frame.Text_baked.png; intensity: 1.0" gltf-model="#Frame.Text" scale="1 1 1" position="4.5229811668396 1.634419560432434 0.013182618655264378" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Light.Bulbs" light-map-geometry="path: lightmaps/Light.Bulbs_baked.png; intensity: 1.0" gltf-model="#Light.Bulbs" scale="1 1 1" position="-0.20323511958122253 2.530625820159912 -0.30871888995170593" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Light.Rail.Left" light-map-geometry="path: lightmaps/Light.Rail.Left_baked.png; intensity: 1.0" gltf-model="#Light.Rail.Left" scale="1 1 1" position="2.2645606994628906 2.836686372756958 -0.686414361000061" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Light.Rail.Right" light-map-geometry="path: lightmaps/Light.Rail.Right_baked.png; intensity: 1.0" gltf-model="#Light.Rail.Right" scale="1 1 1" position="-2.9164202213287354 2.5402655601501465 -0.23222054541110992" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity id="#Text.Creative.Space" light-map-geometry="path: lightmaps/Text.Creative.Space_baked.png; intensity: 1.0" gltf-model="#Text.Creative.Space" scale="1 1 1" position="-2.7891738414764404 1.4065520763397217 -3.6110029220581055" visible="true" shadow="cast: false" ></a-entity>
+        
 <!--        Video panel -->
 <!--
         <a-video id="video01" vimeo="id: 549115867" width="1.33" height="1" position="-1.6 1.442 3.48" rotation="0 180 0">
             
         </a-video>    
 -->
-        
+        <a-entity id="#Screens"  gltf-model="#Screens" scale="1.2 1 1" position="-1.7 1.442 3.58" visible="true" shadow="cast: false" ></a-entity>
         
         <a-entity
             vimeo="id: 553580137; autoplay: true"
             id="vimeo-player"
-            position="-1.6 1.442 3.4"
+            position="-1.7 1.442 3.5"
             rotation="0 180 0"
+            scale="0.9 0.9 0.9"
           >
             <a-plane
               id="play-plane"
@@ -130,10 +221,24 @@
             ></a-plane>
           </a-entity>
         
-        <a-entity light="type:spot; intensity:1;
-                         angle:67; decay:0.3; distance:7"
+        <a-entity light="type:spot; 
+                         intensity:1;
+                         angle:69; 
+                         decay:0.3; 
+                         distance:7;
+                         penumbra:0.2"
                   position="-1.7 1.3 2.6"
                   rotation="180 0 0"></a-entity>
+        
+        <!-- Light before description -->
+        <a-entity light="type:spot; 
+                         intensity:0.3;
+                         angle:30; 
+                         decay:0.3; 
+                         distance:7;
+                         penumbra:0.3"
+                  position="2 1.79 0.13"
+                  rotation="184 90 0"></a-entity>
         
         <!-- Checkpoint -->
         <a-image src="#footsteps" 
@@ -155,34 +260,8 @@
              scale="0.8 0.8 0.8"
              gazed-teleport-llh="xPos:-3.5; zPos:-3"></a-image>
         
-<!--
-      <a-entity id="player" position="-3.5 -.2 -3" rotation="0 -140 0"
-                      movement-controls
-                      checkpoint-controls="mode:animate">
-          <a-entity id="camera" 
-                camera="near: 0.001" 
-                position="0 1.7 0" 
-                look-controls="pointerLockEnabled: true">
-            <a-entity 
-                      cursor
-                      geometry="primitive: ring; radiusOuter: 0.015;
-                                radiusInner: 0.01; segmentsTheta: 32"
-                      material="color: #283644; shader: flat"
-                      position="0 0 -0.75"></a-entity>
-          </a-entity>
-      </a-entity>
--->
+                                   
         
-<!--
-        <a-entity id="rig"
-                  movement-controls
-                  position="-3.5 -0.2 -3">
-          <a-entity camera
-                    position="0 1.7 0"
-                    look-controls="pointerLockEnabled: true"></a-entity>
-        </a-entity>
--->
-      
         <a-entity id="rig" position="-3.5 1.6 -3" rotation="0 180 0">
             <a-entity camera id="camera" look-controls wasd-controls="acceleration:100">
               <a-cursor fuse="true"></a-cursor>
